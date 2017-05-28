@@ -1,0 +1,206 @@
+/*
+	author:Harpreet;
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;#fff716;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.navbar-default {
+    background-color: #9b9f3f;
+    border-color: #e0d90e;
+}
+
+.navbar-default .navbar-brand{
+	font-family: 'tahoma';
+	font-size: 22px;
+	color: #fff716;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #9b9f3f;
+    font-family: 'tahoma';
+    background-color: #e4cf17;
+    font-weight: bold;
+}
+
+
+.navbar-default .navbar-toggle,.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e0d90e;
+}
+
+.navbar-toggle:hover{	
+	background-color: #e0d90e;
+}
+
+.fb-like{
+	padding-top: 10px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff716;
+}
+
+.fbapp-wrapper{
+	margin-top: 70px;
+	font-family:'tahoma';
+	color: #9b9f3f;
+}
+
+.recent-app h2, .youtube-section h2{
+	margin-bottom: 20px;
+	color: #fff716;
+	background-color: #9b9f3f;
+	padding: 5px;
+	font-size: 21px;
+
+}
+.recent-app,.funny-message, .youtube-section,.youtube-container{
+	margin-bottom: 20px;
+}
+.recent-app,.app-container,.youtube-section{
+	text-align: center;
+	color: #9b9f3f;
+	margin-bottom: 20px;
+}
+
+.app-container,.youtube-container,{
+	margin-bottom: 20px;
+	height: auto;
+}
+.app-container h4,.youtube-container h4{
+	margin-top: 2px;
+	font-size: 15px;
+}
+.recent-app a,.recent-app a:hover,.recent-app a:active{
+	color: #9b9f3f;
+}
+
+#banner-container{
+	margin-bottom: 20px;
+}
+
+.carousel-control.left,.carousel-control.right{
+	background-image: none;
+}
+.youtube-frame{
+	width: 265px;
+}
+.funny-message{
+	border-left: 2px solid #e0d90e;
+	border-right: 2px solid #e0d90e;
+	border-radius: 5px;
+	text-align: center;
+}
+.funny-message h2{
+	margin-bottom: 20px;
+    color: #fff716;
+    background-color: #9b9f3f;
+    padding: 5px;
+    font-size: 21px;
+}
+.funny-message .quotes-block{
+	margin-top: 20px;
+	border:1px solid #e0d90e;
+	padding: 20px;	
+	text-align: center;
+}
+.funny-message .quotes-block p{
+	font-size: 15px;
+	line-height: 1.2em;
+}
+
+footer{
+	margin-top: 20px;
+	background-color: #9b9f3f;
+	padding: 20px;
+	text-align: center;
+}
+
+footer p{
+	color:#fff716
+}
+
+#fbapp-enter{
+	text-align: center;
+	min-height: 700px;
+}
+.fbapp-baba-pic{
+	padding: 40px;
+}
+
+.btn-facebook{
+	background-color: #365899;
+	padding: 10px;
+	color: #fff;
+	border-radius: 5px;
+}
+.result-placement{
+	margin-top: 10px;
+}
+@media (min-width: 768px){
+	.navbar {
+	    border-radius: 0px;
+	    
+	}
+	.navbar-nav{
+		float: right;
+	}
+	li.social-content{
+		width:120px;
+	}
+
+	.modal-dialog {
+    	width: 833px;
+ 
+	}
+}
+
+
+@media(max-width: 767px){
+	.navbar{
+		text-align: center;
+	}
+	#fbapp-enter{
+		min-height: 521px;
+	}
+}
+
