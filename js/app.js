@@ -18,12 +18,11 @@
     });
   }
 
-  function startGame() {
+  function startGame(type) {
     FB.api('/me',{ fields: 'id,name,gender,first_name'}, function(response) {
-     
         if(response){
-          var url =   "/php/ImageApp.php?name="+response.first_name+"&profileid="+response.id+"&gender="+response.gender; 
-      
+          var url =   "/php/ImageApp.php?name="+response.first_name+"&profileid="+response.id+"&gender="+response.gender+"&type="+window.type; 
+      //    console.log(url);      
           $.get(url, function( data ) {
             if(data && data == 'error'){
                console.log('error received'); 
@@ -60,16 +59,29 @@
     if(!receivedUrl){
       receivedUrl = cache.url;
     }
-    //    console.log('url 2nd '+receivedUrl);
-    FB.ui({         
-    method: 'feed',
-    link: 'http://pajismile.in/php/baba-says.php',
-    picture:  receivedUrl,
-    title: 'What Om Swami Maharaj know\'s about you?',
-    caption: 'Om Swami is a social, religious and political leader. He has a PhD in astrology. He also claims of devoting his life to serving the country and its people.',
-    }, function(response){
-      $('#thank-you').modal('show');
-    });
+       console.log('url 2nd '+receivedUrl);
+    if(window.type == 2) {
+      FB.ui({         
+      method: 'feed',
+      link: 'http://pajismile.in/php/dhinchak-pooja.php',
+      picture:  receivedUrl,
+      title: 'Which lines does Dhinchak Pooja wants to say to you?',
+      caption: 'Dhinchak Pooja: A look at the new Internet phenomenon of cringe-pop',
+      }, function(response){
+        $('#thank-you').modal('show');
+      });
+    } else {
+      FB.ui({         
+      method: 'feed',
+      link: 'http://pajismile.in/php/baba-says.php',
+      picture:  receivedUrl,
+      title: 'What Om Swami Maharaj know\'s about you?',
+      caption: 'Om Swami is a social, religious and political leader. He has a PhD in astrology. He also claims of devoting his life to serving the country and its people.',
+      }, function(response){
+        $('#thank-you').modal('show');
+      });
+    }
+    
     
   }
 

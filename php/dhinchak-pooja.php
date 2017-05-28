@@ -4,7 +4,7 @@
 ?>
 <html>
 <head>
-	<title>What Om Swami Baba's Divya Drishti know's about you?</title>
+	<title>Which lines does Dhinchak Pooja wants to say to you?</title>
 	<meta property="fb:app_id" content="579755062222884" />
 	<meta property="og:url" content="http://pajismile.in/php/baba-says.php" />
 	<meta property="og:type"   content="website" />
@@ -22,16 +22,16 @@
 			?>
 			<div class="col-md-9">
 			<div id="fbapp-enter" class="container">
-				<div class="h2 ">What Om Swami Baba's Divya Drishti know's about you?</div>
+				<div class="h2 ">Which lines does Dhinchak Pooja wants to say to you?</div>
 				<div class="fbapp-baba-pic">
-					<img id="baba-pic" src="<?= $imagesPath ?>baba.jpg" class="center-block img-responsive">								
+					<img id="baba-pic" src="<?= $imagesPath ?>dhinchak_pooja.jpg" class="center-block img-responsive">								
 				</div>
 				<div class="fbapp-button hidden-xs">
-					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState();">Click here to ask Om Swami Baba
+					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState(2);">Click here to ask Dhinchak Pooja
 					</fb:login-button>
 				</div>
 				<div class="fbapp-button visible-xs">
-					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState();">Click to ask Baba ji
+					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState();">Click to ask  Dhinchak Pooja
 					</fb:login-button>
 				</div>
 			</div>
@@ -66,7 +66,7 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">What Om Swami Baba's Divya Drishti know's about you?</h4>
+	        <h4 class="modal-title">Which lines does Dhinchak Pooja wants to say to you?</h4>
 	      </div>
 	      <div class="modal-body">
 	        <button onclick="shareResults()" class="btn-facebook"><img src="<?= $imagesPath ?>fb.png" width=17px;>&nbsp; Share with your friends</button>
@@ -79,9 +79,9 @@
 
 	  </div>
 	</div>
-
 <script type="text/javascript">
-	window.type = 1;
+	window.type = 2;
 </script>
+
 </body>
 </html>

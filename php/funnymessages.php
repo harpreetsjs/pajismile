@@ -1,5 +1,5 @@
 <section class="funny-message col-md-6">
-	<h2>Funny Quotes</h2>
+	<h2>Messages by Paji</h2>
 	<article class="quotes-block">
 		<blockquote>
 			<p>Why do we say he is right when he is correct?</p>
