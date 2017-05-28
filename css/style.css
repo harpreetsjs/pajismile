@@ -204,5 +204,9 @@ footer p{
 	#fbapp-enter{
 		min-height: 521px;
 	}
+	.fbapp-baba-pic {
+    padding: 40px;
+    width: 300px; 
+	}
 }
 

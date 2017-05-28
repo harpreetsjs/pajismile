@@ -6,11 +6,11 @@
 <head>
 	<title>Which lines does Dhinchak Pooja wants to say to you?</title>
 	<meta property="fb:app_id" content="579755062222884" />
-	<meta property="og:url" content="http://pajismile.in/php/baba-says.php" />
+	<meta property="og:url" content="http://pajismile.in/php/dhinchak-pooja.php" />
 	<meta property="og:type"   content="website" />
-	<meta property="og:title"  content="What Om Swami Baba's Divya Drishti know's about you?" />
-	<meta property="og:description" content="Om Swami is a social, religious and political leader. He has a PhD in astrology. He also claims of devoting his life to serving the country and its people." />
-	<meta property="og:image"  content="http://pajismile.in/images/baba.jpg" />
+	<meta property="og:title"  content="Which lines does Dhinchak Pooja wants to say to you?" />
+	<meta property="og:description" content="Dhinchak Pooja: A look at the new Internet phenomenon of cringe-pop." />
+	<meta property="og:image"  content="http://pajismile.in/images/dhinchak_pooja.jpg" />
 	<?php
 		include 'htmlhead.php';
 	?>
@@ -31,7 +31,7 @@
 					</fb:login-button>
 				</div>
 				<div class="fbapp-button visible-xs">
-					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState();">Click to ask  Dhinchak Pooja
+					<fb:login-button scope="public_profile" data-size="xlarge"  onlogin="checkLoginState();">Ask Dhinchak Pooja
 					</fb:login-button>
 				</div>
 			</div>

@@ -10,7 +10,7 @@ function selectImage($type){
 		$randomChoose = mt_rand(1,27);
 		return __DIR__ . '/..'.'/baba_post/fbpic'.$randomChoose.'.gif';	
 	}else if($type == "2"){
-		$randomChoose = mt_rand(1,9);	
+		$randomChoose = mt_rand(1,13);	
 		return __DIR__ . '/..'.'/pooja_post/fbpic'.$randomChoose.'.gif';	
 	}else{
 		return;
