@@ -1,5 +1,12 @@
+
 <footer class="col-md-12">
-	<p>www.pajismile.in<p>
+	<div class="footer-links">
+		<ul>
+			<li><a href="<?= $phpPath ?>termsandservices.php">Terms and Services</a></li>
+			<li><a href="<?= $phpPath ?>privacy.php">Privacy</a></li>
+			<li><a href="/">&copy;www.pajismile.in</a></li>
+		</ul>
+	</div>
 </footer>
 <div id="thank-you" class="modal fade" role="dialog">
 <div class="modal-dialog">

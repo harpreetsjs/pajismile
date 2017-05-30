@@ -13,6 +13,7 @@
 	<meta property="og:image"  content="http://pajismile.in/images/dhinchak_pooja.jpg" />
 	<?php
 		include 'htmlhead.php';
+		$gameId = "2";
 	?>
 </head>
 <body>
@@ -48,8 +49,8 @@
 					(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
 			</div>
-
 			<?php
+				include 'gamesview.php';	
 				include 'footer.php';
 			?>
 	</div>

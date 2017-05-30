@@ -52,6 +52,8 @@
 
 
 			<?php
+				$gameId = "3";
+				include 'gamesview.php';	
 				include 'footer.php';
 			?>
 	</div>

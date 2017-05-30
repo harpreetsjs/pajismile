@@ -13,7 +13,6 @@
     		<div class="collapse navbar-collapse navbar-ex1-collapse">
 		    <ul class="nav navbar-nav">
 		      <li class="active"><a href="/index.php">HOME</a></li>
-		      <li><a href="/php/baba-says.php">GAMES</a></li>  
 		      <li class="social-content"><div class="fb-like" data-href="https://www.facebook.com/pajismile/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div></li>
 		    </ul>
 		    </div>		   		      
