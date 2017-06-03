@@ -6,6 +6,7 @@ $profileUrl =  $jsonArray['picture']['data']['url'];
 $profileId = $jsonArray['id'];
 $gender = $jsonArray['gender'];
 $name = $jsonArray['first_name'];
+$type = $jsonArray['type'];
 
 function getFoodItem(){
 	$foodArray = array('Anda Bhurji','Chole Kulche','Bhalla Papdi','Bhel Puri','Pakoda','Chole Bhature','Daal Vada','Dahi puri','Dosa','Mendu Vada','Misal Pav','Paratha','Poha','Samosa','Vada Pav');
@@ -72,5 +73,51 @@ function setPostImage($profileUrl,$profileId,$gender,$name){
 
 }
 
-echo setPostImage($profileUrl,$profileId,$gender,$name);
+
+function getLuckyFriendMsg($name) {
+	$percentLuck = mt_rand(80,100);
+	return $name.", you are ".$percentLuck."% lucky for your friends!";
+}
+
+
+function setupImageForLuckyFriends($profileUrl,$profileId,$gender,$name) {
+	$recImg = file_get_contents($profileUrl);  //image 321 x 400
+	$profileImage = __DIR__ . '/..'.'/profile_holder/'.$profileId.'.jpg';
+	file_put_contents($profileImage, $recImg);
+	$photo_to_paste = $profileImage;
+	$white_image=__DIR__ . '/..'.'/images/luckfirendmain.jpg'; //
+
+	$im = imagecreatefromjpeg($white_image);
+	imagealphablending($im, true);
+	$red = imagecolorallocate($im, 255,255,255);
+	imagefttext($im, 18, 0, 80, 270, $red, __DIR__ . '/..'.'/fonts/tahomabd.ttf', getLuckyFriendMsg($name));
+
+	$condicion = GetImageSize($photo_to_paste); // image format?
+
+	if($condicion[2] == 1) //gif
+	$im2 = imagecreatefromgif("$photo_to_paste");
+	if($condicion[2] == 2) //jpg
+	$im2 = imagecreatefromjpeg("$photo_to_paste");
+	if($condicion[2] == 3) //png
+	$im2 = imagecreatefrompng("$photo_to_paste");
+
+	imagecopy($im, $im2, 255,25, 0, 0, imagesx($im2), imagesy($im2));
+	$returnUrl = 'image_post/type/5/'.$profileId.''.mt_rand().'.jpg';
+	$postImagePath = __DIR__ . '/..'.'/'.$returnUrl;
+	if(imagejpeg($im,$postImagePath,90)){
+		$results = array('imgUrl' => $returnUrl);
+		imagedestroy($im);
+		imagedestroy($im2);		
+		return json_encode($results);
+	}else{
+		return 'error';
+	}
+
+}
+
+if($type =="5") {
+	echo setupImageForLuckyFriends($profileUrl,$profileId,$gender,$name);
+}else {
+	echo setPostImage($profileUrl,$profileId,$gender,$name);
+}
 

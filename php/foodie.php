@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 hidden">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- pajismile -->
 					<ins class="adsbygoogle"
@@ -84,6 +84,8 @@
 	  </div>
 	</div>
 
-
+<script type="text/javascript">
+	window.type = <?= $gameId ?>;
+</script>
 </body>
 </html>

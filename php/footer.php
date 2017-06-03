@@ -2,8 +2,10 @@
 <footer class="col-md-12">
 	<div class="footer-links">
 		<ul>
+      <li><a href="<?= $phpPath ?>about.php">About us</a></li>
 			<li><a href="<?= $phpPath ?>termsandservices.php">Terms and Services</a></li>
 			<li><a href="<?= $phpPath ?>privacy.php">Privacy</a></li>
+      <li><a href="<?= $phpPath ?>contact-us.php">Contact</a></li>
 			<li><a href="/">&copy;www.pajismile.in</a></li>
 		</ul>
 	</div>

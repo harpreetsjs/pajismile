@@ -2,7 +2,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
   		<div class="container-fluid">
     		<div class="navbar-header">
-      			<a class="navbar-brand" href="/index.php">pajismile.in</a>
+      			<a class="navbar-brand" href="/">pajismile.in</a>
       			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>

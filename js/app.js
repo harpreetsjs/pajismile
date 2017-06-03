@@ -70,7 +70,17 @@
       }, function(response){
         $('#thank-you').modal('show');
       });
-    } else {
+    }else if(window.type == 4) {
+      FB.ui({         
+      method: 'feed',
+      link: 'http://pajismile.in/php/bollywoodcrush.php',
+      picture:  receivedUrl,
+      title: 'Which Bollywood celebrity is going to propose you?',
+      caption: 'It\'s always a dream of a common person to date or marry some or the other bollywood celebrity. Check out your fortune which bollywood celebrity is going to propose you in near future',
+      }, function(response){
+        $('#thank-you').modal('show');
+      });    
+    }else {
       FB.ui({         
       method: 'feed',
       link: 'http://pajismile.in/php/baba-says.php',
@@ -105,6 +115,26 @@
     });
     
   } 
+
+  function shareLuckyFiendsResults(url){
+    var receivedUrl = url;
+  //  console.log('url 1st '+receivedUrl);
+    $('#baba-reply').modal('hide');
+    if(!receivedUrl){
+      receivedUrl = cache.url;
+    }
+ //       console.log('url 2nd '+receivedUrl);
+    FB.ui({         
+    method: 'feed',
+    link: 'http://pajismile.in/php/luckyforfriends.php',
+    picture:  receivedUrl,
+    title: 'How much lucky are you for your friends?',
+    caption: 'Being lucky for others is something a nice human being always want to be. Checkout how much lucky you are for your friends.',
+    }, function(response){
+      $('#thank-you').modal('show');
+    });
+    
+  } 
   
 function getUserDetails(){
   var results;
@@ -117,9 +147,11 @@ function startFoodieApp(){
   FB.getLoginStatus(function(response) {
 
     if(response && response.status === 'connected'){
-      FB.api('/me',{ fields: 'id,name,gender,first_name,picture.type(normal)'}, function(response) {
+      var profileImgSize = window.type == "5"? "large" :"normal";
+      FB.api('/me',{ fields: "id,name,gender,first_name,picture.type("+profileImgSize+")"}, function(response) {
         if(response){
        //    console.log(JSON.stringify(response));
+            response.type = window.type;
             $.ajax({
               url: '/php/getFoodieResult.php',
               type: 'post',
